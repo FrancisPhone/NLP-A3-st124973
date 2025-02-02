@@ -10,22 +10,22 @@ Dataset -> [link](https://huggingface.co/datasets/Francis-Phone/mm_eng_news_tran
 Preparation Steps
 -----------------
 
-- Segmentation
+- Segmentation:
     According to the researches, Burmese is natuarlly good at syllable level translation. In the web app, syllable segmentation is applied using my old code (utilities) because I am a former NLP Engineer.
 
-- Alignment
+- Alignment:
     In machine translation, the most important thing is the alignment of the corpus. If there are many miss-aligned translations in the corpus, all will be wasted. In real-world case, we usually check the alignment manully and by code. Before training the translation model, we usually train alignment model using 'fast_align' to get the overall alignemnt of the training dataset.
 
-- Punctuations and emojis (Noises)
+- Punctuations and emojis (Noises):
     When data cleaning, the emojis and punctuations become noises and leading the model hard to understand the translation mostly. But in case, we can exclude some punctuations for some reasons.
 
-- Domain and vocabularies
+- Domain and vocabularies:
     In real world case, we usually train the model by domain and vocabularies. We also calculate perplexity of the training corpus to make the initial decision whether enough vocabularies or not. In this way, we can prevent from OOV (out of vocab). In this repository, it is only count the vocabularies to know the each language vocab sizes.
 
-- Augmentation
+- Augmentation:
     There are some synonyms in the dataset so it needs to be correctly augmented to make the model generalization.
 
-- Tokenization 
+- Tokenization:
     In this repository, Sentenpiece tokenizer is used for subword tokenization to make the deeper level understanding of each language.
 
 
@@ -98,5 +98,4 @@ Web App
 - pip install -r requirements.txt
 - python manage.py runserver
 
-
-Including -> Segmentation, Multiple Models, Translation History
+![APP IMAGE](demo.png)

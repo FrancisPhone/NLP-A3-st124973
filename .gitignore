@@ -1,2 +1,4 @@
 translation_models/
-app/.venv/
+App/.venv/
+App/translation_system/db.sqlite3
+App/.idea/
